@@ -1,0 +1,66 @@
+.container .clearfix {
+  list-style: none;
+}
+
+.clearfix {
+  justify-content: center;
+}
+
+.clearfix li {
+  display: block;
+  float: left;
+  width: calc((90% -40px) / 27);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.clearfix li a {
+  position: relative;
+  padding: 0 5px 10px;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+.clearfix li:first-child {
+  width: 35px;
+}
+
+.clearfix li a {
+  font-family: "Pattaya", sans-serif !important;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.clearfix li a:after {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+  opacity: 0;
+  content: "";
+  transform: translateY(3px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.clearfix li a:not(.disabled) {
+  cursor: pointer;
+}
+
+.clearfix li a.disabled {
+  color: var(--primary-color-light-2);
+  cursor: default;
+}
+
+.clearfix li a:not(.disabled):hover:after {
+  opacity: 1;
+}
+
+.clearfix li a.active:after {
+  opacity: 1;
+}
