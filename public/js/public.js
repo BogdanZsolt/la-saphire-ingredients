@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  if(document.querySelector('#ingredients')){
+  if(document.querySelector('#ingredients-section')){
     const menuItems = document.querySelectorAll('a[data-filter]')
     const items = document.querySelectorAll('.item-wrapper')
     let letter = '';

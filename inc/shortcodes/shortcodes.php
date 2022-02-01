@@ -45,17 +45,17 @@ function lasaphire_ingredients_get_list(){
 	$return_html = '';
 	$return_html .= '<div class="container">';
 	$return_html .= '
-			<ul class="clearfix row px-3 mb-3">
+			<ul class="clearfix glassmorph row px-3 mb-3">
 				<li>
-					<a class="active" title="View all ingredients" data-filter="*">
-						All
+					<a class="active" title="' . __('Az összes összetevő megtekintése', 'lasaphire-ingredients') . '" data-filter="*">
+				'	.	__( 'Mind', 'lasaphire-ingredients' ) . '
 					</a>
 				</li>';
 
 	foreach( range( 'A', 'Z' ) as $letter ){
 		$return_html .= '
 				<li>
-					<a class="disabled" title="View ingredients starting with ' . $letter .'" data-filter="cat-' . strtolower($letter) . '">'
+					<a class="disabled" title="' . __('Betűvel kezdődő összetevő megtekintése', 'lasaphire-ingredients') . ' ' . $letter .'" data-filter="cat-' . strtolower($letter) . '">'
 						. $letter .
 					'</a>
 				</li>';
@@ -78,7 +78,7 @@ function lasaphire_ingredients_get_list(){
 			$lname = get_post_meta( $post->ID, '_ingredient_latin_name', true );
 			$photo = get_the_post_thumbnail( $post->ID, array( '75' ), array( 'class' => 'img-fluid' ) );
 			$ing_products = get_ingredient_product_list( $post );
-			$return_html .= '<div class="item-wrapper row mb-3 p-3" style="display: flex">
+			$return_html .= '<div class="item-wrapper glassmorph row mb-3 p-3" style="display: flex">
 				<div class="col-md-2 col-12">'
 					. $photo .
 				'</div>
@@ -90,7 +90,7 @@ function lasaphire_ingredients_get_list(){
 					. $post->post_content .
 				'</div>
 				<div class="col-md-2 col-12">
-					<h6>Found in:</h6>
+					<h6>' . __('Található', 'lasaphire-ingredients') . ':</h6>
 						<ul class="found-in">';
 			foreach( $ing_products as $ing_product ){
 				$product = wc_get_product( $ing_product );
