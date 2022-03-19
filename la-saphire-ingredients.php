@@ -66,7 +66,7 @@ require_once LASAPHIRE_INGREDIENTS_PATH . '/inc/data-tables/ingredient-data-tabl
 require_once LASAPHIRE_INGREDIENTS_PATH . '/inc/shortcodes/shortcodes.php';
 
 function languages(){
-	load_plugin_textdomain( 'lasaphire-ingredients', false, dirname(plugin_basename( __FILE__ )) . '/languages');
+	load_plugin_textdomain( 'lasaphire-ingredients', false, dirname(plugin_basename( __FILE__ )) . '/languages/');
 }
 add_action( 'init', 'languages');
 

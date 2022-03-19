@@ -47,15 +47,15 @@ function lasaphire_ingredients_get_list(){
 	$return_html .= '
 			<ul class="clearfix glassmorph row px-3 mb-3">
 				<li>
-					<a class="active" title="' . __('Az összes összetevő megtekintése', 'lasaphire-ingredients') . '" data-filter="*">
-				'	.	__( 'Mind', 'lasaphire-ingredients' ) . '
+					<a class="active" title="' . esc_html__('View all components', 'lasaphire-ingredients') . '" data-filter="*">
+				'	.	__( 'All', 'lasaphire-ingredients' ) . '
 					</a>
 				</li>';
 
 	foreach( range( 'A', 'Z' ) as $letter ){
 		$return_html .= '
 				<li>
-					<a class="disabled" title="' . __('Betűvel kezdődő összetevő megtekintése', 'lasaphire-ingredients') . ' ' . $letter .'" data-filter="cat-' . strtolower($letter) . '">'
+					<a class="disabled" title="' . esc_html__('View the component that begins with a letter', 'lasaphire-ingredients') . ' ' . $letter .'" data-filter="cat-' . strtolower($letter) . '">'
 						. $letter .
 					'</a>
 				</li>';
@@ -90,7 +90,7 @@ function lasaphire_ingredients_get_list(){
 					. $post->post_content .
 				'</div>
 				<div class="col-md-2 col-12">
-					<h6>' . __('Található', 'lasaphire-ingredients') . ':</h6>
+					<h6>' . esc_html__('Contain', 'lasaphire-ingredients') . ':</h6>
 						<ul class="found-in">';
 			foreach( $ing_products as $ing_product ){
 				$product = wc_get_product( $ing_product );

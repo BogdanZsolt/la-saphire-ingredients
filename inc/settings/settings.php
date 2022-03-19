@@ -7,8 +7,8 @@ function lasaphire_ingredients_settings_submenu(){
 
 	$hook = add_submenu_page(
 		'edit.php?post_type=ingredient',
-		__( 'Beállítások', 'lasaphire-ingredients' ),
-		__( 'Beállítások', 'lasaphire-ingredients' ),
+		__( 'Settings', 'lasaphire-ingredients' ),
+		__( 'Settings', 'lasaphire-ingredients' ),
 		'manage_options',
 		'ingredients-option-link',
 		'lasaphire_ingredients_settings_template_callback',

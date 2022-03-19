@@ -8,10 +8,9 @@ function lasaphire_ingredients($tabs){
 
 	$tabs['ingredients'] = array(
 		'id'			=> '_ingredients',
-		// 'label'			=> __('Ingredients', 'lasaphire-ingredients'),
-		'label'			=> __('Összetevők', 'lasaphire-ingredients'),
-		// 'description'	=> __('Beauty provide access to the ingredient list of products.', 'lasaphire-ingredients'),
-		'description'	=> __('Lasaphire hozzáférést biztosít a termékek összetevőlistájához.', 'lasaphire-ingredients'),
+		'label'			=> esc_html__('Ingredients', 'lasaphire-ingredients'),
+		'description'	=> esc_html__('La Saphire provide access to the ingredient list of products.', 'lasaphire-ingredients'),
+		// 'description'	=> __('Lasaphire hozzáférést biztosít a termékek összetevőlistájához.', 'lasaphire-ingredients'),
 		'wrapper_class'	=> 'show_if_simple',
 		'default'		=> 'no',
 	);
@@ -37,7 +36,7 @@ add_action( 'save_post_product', 'lasaphire_save_ingredients_product_data' );
 function lasaphire_product_tab( $tabs) {
 
 	$tabs['ingredients'] = array(
-		'label'			=> __('Összetevők', 'lasaphire-ingredients'),
+		'label'			=> esc_html__('Ingredients', 'lasaphire-ingredients'),
 		'target'		=> 'ingredients_product_data',
 		'class'  		=> array( 'show_if_ingredients', 'hide_if_virtual', 'hide_if_downloadable' ),
 		'priority'		=> 25,
@@ -100,7 +99,7 @@ function lasaphire_ingredients_product_data(){
 				array(
 					'id'			=> '_ingredient_select',
 					'name'			=> '_ingredient_select[]',
-					'label'			=> __('Összetevők', 'lasaphire-ingredients'),
+					'label'			=> esc_html__('Ingredients', 'lasaphire-ingredients'),
 					'options'		=> $options,
 					'selected'		=> true,
 					'value'			=> get_post_meta( $product->id, '_ingredient_select', true ),
@@ -142,7 +141,7 @@ function lasaphire_ingredients_product_tab( $tabs ) {
 	$is_ingredient = get_post_meta( $product->id, '_ingredients', true);
 	if( $is_ingredient == 'yes' ) {
 		$tabs['ingredients'] = array(
-			'title' 	=> __( 'Összetevők', 'woocommerce' ),
+			'title' 	=> esc_html__( 'Ingredients', 'lasaphire-ingredients' ),
 			'priority' 	=> 15,
 			'class'  	=> array( 'show_if_ingredients' ),
 			'callback' 	=> 'lasaphire_ingredients_product_tab_content'
@@ -161,7 +160,7 @@ function lasaphire_ingredients_product_tab_content() {
 	$content_html = '';
 	$ingr_ids = get_post_meta( $product->id, '_ingredient_select', true);
 	if(!empty($ingr_ids)){
-		$content_html .= '<div><h2 class="mb-3">' . __( 'Termék Összetevők', 'lasaphire-ingredients')  . '</h2>';
+		$content_html .= '<div><h2 class="mb-3">' . esc_html__( 'Product Ingredients', 'lasaphire-ingredients')  . '</h2>';
 		foreach( $ingr_ids as $ingr_id){
 			$ingredient = get_post( $ingr_id );
 			$lname = get_post_meta( $ingr_id, '_ingredient_latin_name', true );
