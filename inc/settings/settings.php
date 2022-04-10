@@ -7,8 +7,8 @@ function lasaphire_ingredients_settings_submenu(){
 
 	$hook = add_submenu_page(
 		'edit.php?post_type=ingredient',
-		__( 'Settings', 'lasaphire-ingredients' ),
-		__( 'Settings', 'lasaphire-ingredients' ),
+		esc_html__( 'Settings', 'ls-ingredients' ),
+		esc_html__( 'Settings', 'ls-ingredients' ),
 		'manage_options',
 		'ingredients-option-link',
 		'lasaphire_ingredients_settings_template_callback',
@@ -25,8 +25,8 @@ add_action( 'admin_menu', 'lasaphire_ingredients_settings_submenu' );
 */
 function lasaphire_ingredients_image_uploader_assets(){
 	wp_enqueue_media();
-	wp_enqueue_style( 'lasaphire-ingredients-image-uploader-style' );
-	wp_enqueue_script( 'lasaphire-ingredients-image-uploader-script');
+	wp_enqueue_style( 'ls-ingredients-image-uploader-style' );
+	wp_enqueue_script( 'ls-ingredients-image-uploader-script');
 }
 
 /**
@@ -40,10 +40,10 @@ function lasaphire_ingredients_settings_template_callback(){
 		<form action="options.php" method="post">
 			<?php
 				// Security field
-				settings_fields( 'lasaphire-ingredients-settings-page' );
+				settings_fields( 'ls-ingredients-settings-page' );
 
 				// output settings section here
-				do_settings_sections( 'lasaphire-ingredients-settings-page' );
+				do_settings_sections( 'ls-ingredients-settings-page' );
 
 				// Save Settings button
 				submit_button( 'Save Settings' );
@@ -63,12 +63,12 @@ function lasaphire_ingredients_settings_init(){
 		'lasaphire_ingredients_settings_section',
 		'La Saphire Ingredients Settings Page',
 		'',
-		'lasaphire-ingredients-settings-page'
+		'ls-ingredients-settings-page'
 	);
 
 	// Register input field
 	register_setting(
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_input_field',
 		array(
 			'type'				=> 'string',
@@ -82,13 +82,13 @@ function lasaphire_ingredients_settings_init(){
 		'lasaphire_ingredients_input_field',
 		__( 'Input Field', 'my-plugin' ),
 		'lasaphire_ingredients_settings_input_field_callback',
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_settings_section',
 	);
 
 	// Register textarea field
 	register_setting(
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_textarea_field',
 		array(
 			'type'				=> 'string',
@@ -102,13 +102,13 @@ function lasaphire_ingredients_settings_init(){
 		'lasaphire_ingredients_textarea_field',
 		__( 'Textarea Field', 'my-plugin' ),
 		'lasaphire_ingredients_settings_textarea_field_callback',
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_settings_section',
 	);
 
 	// Register select option field
 	register_setting(
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_select_field',
 		array(
 			'type'				=> 'string',
@@ -122,13 +122,13 @@ function lasaphire_ingredients_settings_init(){
 		'lasaphire_ingredients_select_field',
 		__( 'Select Field', 'my-plugin' ),
 		'lasaphire_ingredients_settings_select_field_callback',
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_settings_section',
 	);
 
 	// Register radio field
 	register_setting(
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_radio_field',
 		array(
 			'type'				=> 'string',
@@ -142,13 +142,13 @@ function lasaphire_ingredients_settings_init(){
 		'lasaphire_ingredients_radio_field',
 		__( 'Radio Field', 'my-plugin' ),
 		'lasaphire_ingredients_settings_radio_field_callback',
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_settings_section',
 	);
 
 	// Register checkbox field
 	register_setting(
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_checkbox_field',
 		array(
 			'type'				=> 'string',
@@ -162,13 +162,13 @@ function lasaphire_ingredients_settings_init(){
 		'lasaphire_ingredients_checkbox_field',
 		__( 'Checkbox Field', 'my-plugin' ),
 		'lasaphire_ingredients_settings_checkbox_field_callback',
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_settings_section',
 	);
 
 	// Register image uploader field
 	register_setting(
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_image_uploader_field',
 		array(
 			'type'				=> 'integer',
@@ -182,7 +182,7 @@ function lasaphire_ingredients_settings_init(){
 		'lasaphire_ingredients_image_uploader_field',
 		__( 'Image Uploader', 'my-plugin' ),
 		'lasaphire_ingredients_settings_checkboximage_uploader_field_callback',
-		'lasaphire-ingredients-settings-page',
+		'ls-ingredients-settings-page',
 		'lasaphire_ingredients_settings_section',
 	);
 }
@@ -266,9 +266,9 @@ function lasaphire_ingredients_settings_checkbox_field_callback(){
 function lasaphire_ingredients_settings_checkboximage_uploader_field_callback(){
 	$lasaphire_ingredients_image_id = get_option( 'lasaphire_ingredients_image_uploader_field' );
 	?>
-	<div class="lasaphire-ingredients-uploader-wrap">
+	<div class="ls-ingredients-uploader-wrap">
 		<img data-src="" src="<?php echo esc_url( wp_get_attachment_url( $lasaphire_ingredients_image_id ) ); ?>" width="250" />
-		<div class="lasaphire-ingredients-upload-action">
+		<div class="ls-ingredients-upload-action">
 			<input type="hidden" name="lasaphire_ingredients_image_uploader_field" value="<?php echo esc_attr( isset( $lasaphire_ingredients_image_id ) ? ( int ) $lasaphire_ingredients_image_id : 0 ); ?>" />
 			<button type="button" class="upload-image-button"><span class="dashicons dashicons-plus"></span></button>
 			<button type="button" class="remove-image-button"><span class="dashicons dashicons-minus"></span></button>

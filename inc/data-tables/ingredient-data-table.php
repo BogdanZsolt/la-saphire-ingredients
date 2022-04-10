@@ -7,9 +7,9 @@ function add_ingredient_columns( $columns ){
 
 	unset( $columns[ 'date' ]);
 
-	$columns['latin_name']		= esc_html__('Latin name', 'lasaphire-ingredients');
-	$columns['featured_image']	= esc_html__('featured image', 'lasaphire-ingredients');
-	$columns['date']			= esc_html__('Date', 'lasaphire-ingredients');
+	$columns['latin_name']		= esc_html__( 'Latin name', 'ls-ingredients' );
+	$columns['featured_image']	= esc_html__( 'featured image', 'ls-ingredients' );
+	$columns['date']			= esc_html__( 'Date', 'ls-ingredients' );
 
 	return $columns;
 }

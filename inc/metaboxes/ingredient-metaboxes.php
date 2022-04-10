@@ -8,7 +8,7 @@ function lasaphire_add_ingredient_custom_box() {
     foreach ( $screens as $screen ) {
         add_meta_box(
             'ingredient_data',				// Unique ID
-            'Ingredient Data',      		// Box title
+            esc_html__( 'Ingredient Data', 'ls-ingredients' ),      		// Box title
             'lasaphire_ingredient_data_html',  	// Content callback, must be of type callable
             $screen							// Post type
         );
@@ -25,7 +25,7 @@ function lasaphire_ingredient_data_html( $post ) {
 	?>
 	<table>
 		<tr>
-			<td>Latin Name: </td>
+			<td><?php esc_html_e( 'Latin Name', 'ls-ingredients' ); ?>':'</td>
 			<td>
 				<input type="text" value="<?php echo $lname; ?>" id="ingredient_latin_name" name="ingredient_latin_name">
 			</td>

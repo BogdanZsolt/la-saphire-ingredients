@@ -3,9 +3,9 @@
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: lasaphire ingredients v1.0.0\n"
+"Project-Id-Version: lsing v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2022-03-19 09:22+0100\n"
+"POT-Creation-Date: 2022-03-21 09:57+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -26,198 +26,257 @@ msgstr ""
 
 #: inc/data-tables/ingredient-data-table.php:10
 msgid "Latin name"
-msgstr "Latin név"
+msgstr ""
 
 #: inc/data-tables/ingredient-data-table.php:11
 msgid "featured image"
-msgstr "kiemelt kép"
+msgstr ""
 
 #: inc/data-tables/ingredient-data-table.php:12
 msgid "Date"
-msgstr "Dátum"
+msgstr ""
 
 #: inc/menus/menus.php:8 inc/menus/menus.php:9
 msgid "Custom Menu"
-msgstr "Egyedi menü"
+msgstr ""
 
 #: inc/menus/menus.php:19 inc/menus/menus.php:20
 msgid "Custom Submenu"
-msgstr "Egyedi almenü"
+msgstr ""
 
 #: inc/menus/menus.php:28 inc/menus/menus.php:29
 msgid "Custom Submenu 2"
-msgstr "Egyedi almenü 2"
+msgstr ""
 
 #: inc/menus/menus.php:37 inc/menus/menus.php:38 inc/menus/menus.php:46
 #: inc/menus/menus.php:47 inc/menus/menus.php:55 inc/menus/menus.php:56
 #: inc/menus/menus.php:64 inc/menus/menus.php:65
 msgid "Custom Link"
-msgstr "Egyéni link"
+msgstr ""
 
 #: inc/menus/menus.php:78
 msgid "Hi I am from custom submenu!"
-msgstr "Sziasztok az egyéni almenüből vagyok!"
+msgstr ""
 
 #: inc/menus/menus.php:87
 msgid "Hi I am from custom submenu 2!!!"
-msgstr "Sziasztok az egyéni almenü 2-ből vagyok!!!"
+msgstr ""
 
 #: inc/menus/menus.php:97
 msgid "Hello, I am from the custom link template!!!"
-msgstr "Sziasztok, az egyéni linksablonból származom!!!"
+msgstr ""
 
 #: inc/menus/menus.php:106
 msgid "Hey I am from custom tool link!!!"
-msgstr "Hé, az egyedi eszköz linkjétől származom!!!"
+msgstr ""
 
 #: inc/menus/menus.php:115
 msgid "Hey I am from custom option link!!!"
-msgstr "Hé, az egyéni opciós linkből származom!!!"
+msgstr ""
 
-#: inc/post-types/ingredient.php:8 inc/post-types/ingredient.php:10
+#: inc/metaboxes/ingredient-metaboxes.php:11
+msgid "Ingredient Data"
+msgstr ""
+
+#: inc/metaboxes/ingredient-metaboxes.php:28
+msgid "Latin Name"
+msgstr "Latin Név"
+
+#: inc/post-types/ingredient.php:11
+msgctxt "Post Type General Name"
+msgid "Ingredients"
+msgstr "Osszetevok"
+
+#: inc/post-types/ingredient.php:12
+msgctxt "Post Type Singular Name"
+msgid "Ingredient"
+msgstr "Összetevő"
+
+#: inc/post-types/ingredient.php:13 inc/post-types/ingredient.php:14
+#: inc/post-types/ingredient.php:102
 #: inc/wc-modifications/wc-modifications.php:11
 #: inc/wc-modifications/wc-modifications.php:39
 #: inc/wc-modifications/wc-modifications.php:102
 #: inc/wc-modifications/wc-modifications.php:144
 msgid "Ingredients"
-msgstr "Összetevők"
+msgstr "Osszetevok"
 
-#: inc/post-types/ingredient.php:9 inc/post-types/ingredient.php:11
+#: inc/post-types/ingredient.php:15
+msgid "Item Archives"
+msgstr ""
+
+#: inc/post-types/ingredient.php:16
+msgid "Item Attributes"
+msgstr ""
+
+#: inc/post-types/ingredient.php:17
+msgid "Parent Item:"
+msgstr ""
+
+#: inc/post-types/ingredient.php:18
+msgid "All Items"
+msgstr ""
+
+#: inc/post-types/ingredient.php:19
+msgid "Add New Item"
+msgstr ""
+
+#: inc/post-types/ingredient.php:20
+msgid "Add New"
+msgstr ""
+
+#: inc/post-types/ingredient.php:21
+msgid "New Item"
+msgstr ""
+
+#: inc/post-types/ingredient.php:22
+msgid "Edit Item"
+msgstr ""
+
+#: inc/post-types/ingredient.php:23
+msgid "Update Item"
+msgstr ""
+
+#: inc/post-types/ingredient.php:24
+msgid "View Item"
+msgstr ""
+
+#: inc/post-types/ingredient.php:25
+msgid "View Items"
+msgstr ""
+
+#: inc/post-types/ingredient.php:26
+msgid "Search Item"
+msgstr ""
+
+#: inc/post-types/ingredient.php:27
+msgid "Not found"
+msgstr ""
+
+#: inc/post-types/ingredient.php:28
+msgid "Not found in Trash"
+msgstr ""
+
+#: inc/post-types/ingredient.php:29
+msgid "Featured Image"
+msgstr "Kiemelt Kép"
+
+#: inc/post-types/ingredient.php:30
+msgid "Set featured image"
+msgstr ""
+
+#: inc/post-types/ingredient.php:31
+msgid "Remove featured image"
+msgstr ""
+
+#: inc/post-types/ingredient.php:32
+msgid "Use as featured image"
+msgstr ""
+
+#: inc/post-types/ingredient.php:33
+msgid "Insert into item"
+msgstr ""
+
+#: inc/post-types/ingredient.php:34
+msgid "Uploaded to this item"
+msgstr ""
+
+#: inc/post-types/ingredient.php:35
+msgid "Items list"
+msgstr ""
+
+#: inc/post-types/ingredient.php:36
+msgid "Items list navigation"
+msgstr ""
+
+#: inc/post-types/ingredient.php:37
+msgid "Filter items list"
+msgstr ""
+
+#: inc/post-types/ingredient.php:41
 msgid "Ingredient"
 msgstr "Összetevő"
 
-#: inc/post-types/ingredient.php:12
-msgid "Add New"
-msgstr "Új hozzáadása"
-
-#: inc/post-types/ingredient.php:13
-msgid "Add New Ingredient"
-msgstr "Új összetevő hozzáadása"
-
-#: inc/post-types/ingredient.php:14 inc/post-types/ingredient.php:29
-msgid "All Ingredients"
-msgstr "Összes összetevő"
-
-#: inc/post-types/ingredient.php:15 inc/post-types/ingredient.php:32
-msgid "Search Ingredients"
-msgstr "Keresés az összetevők között"
-
-#: inc/post-types/ingredient.php:16
-msgid "No ingredient found."
-msgstr "Az összetevő nem található."
-
-#: inc/post-types/ingredient.php:17
-msgid "No ingredient in Trash."
-msgstr "Az összetevő nem található a lomtárben."
-
-#: inc/post-types/ingredient.php:18
-msgid "Ingredient Cover Image"
-msgstr "Összetevő Borítókép"
-
-#: inc/post-types/ingredient.php:19
-msgid "Set cover image"
-msgstr "Borítókép beállítása"
-
-#: inc/post-types/ingredient.php:20
-msgid "Remove cover image"
-msgstr "Borítókép törlése"
-
-#: inc/post-types/ingredient.php:21
-msgid "Use as cover image"
-msgstr "Használat Borítóképként"
-
-#: inc/post-types/ingredient.php:22
-msgid "Ingredient archives"
-msgstr "Összetevők arhívuma"
-
-#: inc/post-types/ingredient.php:23
-msgid "Insert into ingredient"
-msgstr "Beszúrás az összetevőkhöz"
-
-#: inc/post-types/ingredient.php:24
-msgid "Uploaded to this ingredient"
-msgstr "Feltöltés az összetevőhöz"
-
-#: inc/post-types/ingredient.php:25
-msgid "Filter ingredients list"
-msgstr "Szűrt összetevő lista"
-
-#: inc/post-types/ingredient.php:26
-msgid "Ingredients list navigation"
-msgstr "Összetevő lista navigáció"
-
-#: inc/post-types/ingredient.php:27
-msgid "Ingredients list"
-msgstr "Összetevő lista"
-
-#: inc/post-types/ingredient.php:28
-msgid "New Ingredient"
-msgstr "Új összetevő"
-
-#: inc/post-types/ingredient.php:30
-msgid "Edit Ingredient"
-msgstr "Összetevő szerkesztése"
-
-#: inc/post-types/ingredient.php:31
-msgid "View Ingredient"
-msgstr "Összetevő megtekintése"
-
-#: inc/post-types/ingredient.php:70
-msgid "Ingredient info"
-msgstr "Összetevő információ"
-
-#: inc/post-types/ingredient.php:93
-msgid "Ingredient name"
-msgstr "Összetevő név"
+#: inc/post-types/ingredient.php:42
+msgid "Ingredients Info"
+msgstr "Információ az összetevőről"
 
 #: inc/settings/settings.php:10 inc/settings/settings.php:11
 msgid "Settings"
-msgstr "Beállítások"
+msgstr ""
 
 #: inc/settings/settings.php:83
 msgid "Input Field"
-msgstr "Beviteli mező"
+msgstr ""
 
 #: inc/settings/settings.php:103
 msgid "Textarea Field"
-msgstr "Szövegterület mező"
+msgstr ""
 
 #: inc/settings/settings.php:123
 msgid "Select Field"
-msgstr "Kiválasztó mező"
+msgstr ""
 
 #: inc/settings/settings.php:143
 msgid "Radio Field"
-msgstr "Rádiómező"
+msgstr ""
 
 #: inc/settings/settings.php:163
 msgid "Checkbox Field"
-msgstr "Jelölőnégyzet Mező"
+msgstr ""
 
 #: inc/settings/settings.php:183
 msgid "Image Uploader"
-msgstr "Kép feltöltő"
+msgstr ""
 
 #: inc/shortcodes/shortcodes.php:50
 msgid "View all components"
-msgstr "Az összes összetevő megtekintése"
+msgstr ""
 
 #: inc/shortcodes/shortcodes.php:51
 msgid "All"
-msgstr "Mind"
+msgstr ""
 
 #: inc/shortcodes/shortcodes.php:58
 msgid "View the component that begins with a letter"
-msgstr "Betűvel kezdődő összetevő megtekintése"
+msgstr ""
 
 #: inc/shortcodes/shortcodes.php:93
 msgid "Contain"
-msgstr "Tartalmaz"
+msgstr ""
 
 #: inc/wc-modifications/wc-modifications.php:12
 msgid "La Saphire provide access to the ingredient list of products."
-msgstr "La Saphire hozzáférést biztosít a termékek összetevőlistájához."
+msgstr ""
 
 #: inc/wc-modifications/wc-modifications.php:163
 msgid "Product Ingredients"
-msgstr "Product Ingredients"
+msgstr ""
+
+#~ msgctxt "Pot Type General Name"
+#~ msgid "Ingredients"
+#~ msgstr "Összetevők"
+
+#, fuzzy
+#~| msgid "Ingredient"
+#~ msgctxt "lsingredient"
+#~ msgid "Ingredient"
+#~ msgstr "Összetevő"
+
+#, fuzzy
+#~| msgid "Ingredients"
+#~ msgctxt "lsingredient"
+#~ msgid "Ingredients"
+#~ msgstr "Osszetevok"
+
+#, fuzzy
+#~| msgid "Ingredients"
+#~ msgctxt "lsing"
+#~ msgid "Ingredients"
+#~ msgstr "Osszetevok"
+
+#, fuzzy
+#~| msgid "Ingredient"
+#~ msgctxt "lsing"
+#~ msgid "Ingredient"
+#~ msgstr "Összetevő"

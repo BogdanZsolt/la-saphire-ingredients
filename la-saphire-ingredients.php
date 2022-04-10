@@ -6,7 +6,7 @@
  * Author: Shiru
  * Author URI: https://www.zsoltbogdan.hu
  * version: 1.0.0
-	* Text Domain: lasaphire-ingredients
+	* Text Domain: lsingradient
 	* Domain Path: /languages
  * Description: A plugin for beauty ingredients
 */
@@ -65,10 +65,10 @@ require_once LASAPHIRE_INGREDIENTS_PATH . '/inc/data-tables/ingredient-data-tabl
 */
 require_once LASAPHIRE_INGREDIENTS_PATH . '/inc/shortcodes/shortcodes.php';
 
-function languages(){
-	load_plugin_textdomain( 'lasaphire-ingredients', false, dirname(plugin_basename( __FILE__ )) . '/languages/');
+function ls_ing_localize(){
+	load_plugin_textdomain( 'lsingredient', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
-add_action( 'init', 'languages');
+add_action( 'init', 'ls_ing_localize');
 
 /**
  * If WooCommerce exist
